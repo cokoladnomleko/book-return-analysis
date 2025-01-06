@@ -25,7 +25,7 @@ Categorical columns had different formats for the same category and they were no
 The analysis pointed to some factors contributing to late returns.<br/>
 The main one seems to be the *lenght of the books*, suggesting patrons simply need more time to read long books.<br/>
 Another important effect is the *library and customers location* - the harder it is to get to the library the less likely a book is to be returned on time.
-> [!Suggestions for the library]
+> [!NOTE]
 > Long books could have longer return times. Customers that live far away could be allowed to return their books to a closer library.
 
 ## Feature Engineering
@@ -42,6 +42,6 @@ Models that will be tested are **XGBoost**, **RandomForestClassifier** and **SVM
 
 Metrics used for model comparison are *accuracy*, *balanced accuracy*, *roc auc score* and *precision-recall curve*.<br/>
 Best results are achieved with using XGBoost with the following parameters:
-'''
+```
 {'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 300, 'scale_pos_weight': 5, 'subsample': 1.0}
-'''
+```
